@@ -1,5 +1,5 @@
 # baseURL = "http://localhost/"
-baseURL = "https://emandeguzman.github.io/"
+baseURL = "https://emandeguzman.github.io/emandeguzman/"
 # baseURL = "http://localhost/github/emandeguzman.github.io/"
 # DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
