@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Snippet on Eman&#39;s Blog</title>
-    <link>https://emandeguzman.github.io/categories/snippet/</link>
+    <link>https://emandeguzman.github.io/emandeguzman/categories/snippet/</link>
     <description>Recent content in Snippet on Eman&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Sun, 16 May 2021 07:31:27 +0800</lastBuildDate>
     
-	<atom:link href="https://emandeguzman.github.io/categories/snippet/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://emandeguzman.github.io/emandeguzman/categories/snippet/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>waitFor</title>
-      <link>https://emandeguzman.github.io/posts/waitfor/</link>
+      <link>https://emandeguzman.github.io/emandeguzman/posts/waitfor/</link>
       <pubDate>Sun, 16 May 2021 07:31:27 +0800</pubDate>
       
-      <guid>https://emandeguzman.github.io/posts/waitfor/</guid>
+      <guid>https://emandeguzman.github.io/emandeguzman/posts/waitfor/</guid>
       <description>Motivation With the use of defer/async to load javascipts, it has become apparent that we must make sure that the javascript function, object, variables are loaded before referring to the those items. waitFor checks for the presence of these items then runs the provided callback function (if any) once the checked item is loaded and ready for use. waitFor returns a Promise so it can also be used in a promise chain.</description>
     </item>
     

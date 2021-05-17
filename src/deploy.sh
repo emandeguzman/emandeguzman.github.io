@@ -12,4 +12,5 @@ rm -rf ../sitemap.xml
 rm -rf ../tags
 rm -rf ../vendor
 
-hugo 
+hugo
+# hugo -b "http://localhost/github/emandeguzman/"
