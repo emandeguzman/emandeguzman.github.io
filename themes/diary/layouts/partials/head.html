@@ -47,12 +47,16 @@
 <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
 {{ end }}
 
-{{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+<!-- { { $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }} -->
+<!-- <link rel="stylesheet" href="{ { $styles.Permalink }}" integrity="{ { $styles.Data.Integrity }}" media="screen"> -->
+{{ $styles := resources.Get "scss/journal.scss" | toCSS | minify  }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
 {{ if not .Site.Params.disableDarkmode }}
-{{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
+<!-- { { $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }} -->
+<!-- <link rel="stylesheet" href="{ { $darkmode.Permalink }}" integrity="{ { $darkmode.Data.Integrity }}" media="screen"> -->
+{{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $darkmode.Permalink }}" media="screen">
 {{ end }}
 
 <script src="{{"/js/loadCSS.js" | relURL}}"></script>
