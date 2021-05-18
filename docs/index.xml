@@ -6,9 +6,61 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Tue, 18 May 2021 13:06:22 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 18 May 2021 15:50:28 +0800</lastBuildDate>
     
         <atom:link href="https://emandeguzman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Different ways of hiding elements</title>
+        <link>https://emandeguzman.github.io/posts/hiding_elements/</link>
+        <pubDate>Tue, 18 May 2021 15:50:28 +0800</pubDate>
+        
+        <guid>https://emandeguzman.github.io/posts/hiding_elements/</guid>
+        <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/hiding_elements/ -&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;read by&lt;!-- raw HTML omitted --&gt; screen reader&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;affects&lt;!-- raw HTML omitted --&gt;document layout&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;rendered&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;responds&lt;!-- raw HTML omitted --&gt; to events&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;display: none&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;visibility=hidden&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;opacity=0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;position=absolute&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://emandeguzman.github.io/posts/hiding_elements/ - This is a customized copyright.</description>
+        </item>
     
     
     

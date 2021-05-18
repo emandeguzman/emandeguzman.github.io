@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Tue, 18 May 2021 13:06:22 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 18 May 2021 15:50:28 +0800</lastBuildDate>
     
 	<atom:link href="https://emandeguzman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS</title>
+      <link>https://emandeguzman.github.io/tags/css/</link>
+      <pubDate>Tue, 18 May 2021 15:50:28 +0800</pubDate>
+      
+      <guid>https://emandeguzman.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>https://emandeguzman.github.io/tags/html/</link>
+      <pubDate>Tue, 18 May 2021 13:06:22 +0800</pubDate>
+      
+      <guid>https://emandeguzman.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meta Tags</title>
+      <link>https://emandeguzman.github.io/tags/meta-tags/</link>
+      <pubDate>Tue, 18 May 2021 13:06:22 +0800</pubDate>
+      
+      <guid>https://emandeguzman.github.io/tags/meta-tags/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Safari</title>
