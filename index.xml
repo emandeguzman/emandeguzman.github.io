@@ -1,24 +1,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eman&#39;s Blog</title>
-    <link>https://emandeguzman.github.io/emandeguzman/</link>
+    <link>https://emandeguzman.github.io/</link>
     <description>Recent content on Eman&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Sun, 16 May 2021 07:31:27 +0800</lastBuildDate>
     
-        <atom:link href="https://emandeguzman.github.io/emandeguzman/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://emandeguzman.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>waitFor</title>
-        <link>https://emandeguzman.github.io/emandeguzman/posts/waitfor/</link>
+        <link>https://emandeguzman.github.io/posts/waitfor/</link>
         <pubDate>Sun, 16 May 2021 07:31:27 +0800</pubDate>
         
-        <guid>https://emandeguzman.github.io/emandeguzman/posts/waitfor/</guid>
-        <description>Eman&#39;s Blog https://emandeguzman.github.io/emandeguzman/posts/waitfor/ -&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+        <guid>https://emandeguzman.github.io/posts/waitfor/</guid>
+        <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/waitfor/ -&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;With the use of defer/async to load javascipts, it has become apparent that we must make sure that the javascript function, object, variables are loaded before referring to the those items.
 waitFor checks for the presence of these items then runs the provided callback function (if any) once the checked item is loaded and ready for use.
 waitFor returns a Promise so it can also be used in a promise chain. This is especially usefull when checking for existence of a function since you cannot reference a non-defined function in the callback.&lt;/p&gt;
@@ -129,7 +129,7 @@ waitFor returns a Promise so it can also be used in a promise chain. This is esp
         })();
     })
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://emandeguzman.github.io/emandeguzman/posts/waitfor/ - This is a customized copyright.</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://emandeguzman.github.io/posts/waitfor/ - This is a customized copyright.</description>
         </item>
     
     
