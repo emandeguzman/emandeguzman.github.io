@@ -6,9 +6,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Sun, 16 May 2021 07:31:27 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 18 May 2021 13:06:22 +0800</lastBuildDate>
     
         <atom:link href="https://emandeguzman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Safari_overflow</title>
+        <link>https://emandeguzman.github.io/posts/safari_overflow/</link>
+        <pubDate>Tue, 18 May 2021 13:06:22 +0800</pubDate>
+        
+        <guid>https://emandeguzman.github.io/posts/safari_overflow/</guid>
+        <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/safari_overflow/ -&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;I encountered this situation where Safari&amp;rsquo;s display would overflow when the keyboard shows up. This ruins the whole page even when the elements have a width of 100% and body has and overflow-x hidden set.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;In head, add a meta tag for viewport like&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;meta name=&amp;quot;viewport&amp;rdquo; content=&amp;quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0&amp;quot;&amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;width&lt;/strong&gt; would set the viewport&amp;rsquo;s width to that of the device&amp;rsquo;s width.
+&lt;strong&gt;initial-scale&lt;/strong&gt; makes sure the zoom level is initially set to 1 (100%).
+&lt;strong&gt;maximum-scale&lt;/strong&gt; prevent&amp;rsquo;s zooming beyond 100%.
+&lt;strong&gt;user-scalable&lt;/strong&gt; disallows the device to zoom in or out.
+&lt;strong&gt;minimum-scale&lt;/strong&gt; though not included in the fix. I just added it here for completeness. This sets the minimum amount of zooming the can be done for the device.&lt;/p&gt;
+- https://emandeguzman.github.io/posts/safari_overflow/ - This is a customized copyright.</description>
+        </item>
     
     
     
