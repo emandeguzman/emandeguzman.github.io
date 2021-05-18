@@ -1,6 +1,7 @@
 ---
-title: "Safari_overflow"
+title: "Safari overflow"
 date: 2021-05-18T13:06:22+08:00
+description: "A fix for when a page rendered in safari overflows horizontally."
 tags: [Safari]
 # featured_image: "/images/notebook.jpg"
 categories: Tips
