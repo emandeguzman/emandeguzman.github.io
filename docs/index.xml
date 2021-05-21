@@ -6,9 +6,78 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Tue, 18 May 2021 15:50:28 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 May 2021 13:45:08 +0800</lastBuildDate>
     
         <atom:link href="https://emandeguzman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>VS Code Key Bindings for Multi-line Editing</title>
+        <link>https://emandeguzman.github.io/posts/multiline-edit/</link>
+        <pubDate>Fri, 21 May 2021 13:45:08 +0800</pubDate>
+        
+        <guid>https://emandeguzman.github.io/posts/multiline-edit/</guid>
+        <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/multiline-edit/ -&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Shortcut Keys&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Alt+Click&lt;/td&gt;
+&lt;td&gt;Insert cursor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Alt+↑/↓&lt;/td&gt;
+&lt;td&gt;Insert cursor above/ below&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+U&lt;/td&gt;
+&lt;td&gt;Undo last cursor operation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+I&lt;/td&gt;
+&lt;td&gt;Insert cursor at end of each line selected&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+L&lt;/td&gt;
+&lt;td&gt;Select current line&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+L&lt;/td&gt;
+&lt;td&gt;Select all occurrences of current selection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+F2&lt;/td&gt;
+&lt;td&gt;Select all occurrences of current word&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+→&lt;/td&gt;
+&lt;td&gt;Expand selection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+←&lt;/td&gt;
+&lt;td&gt;Shrink selection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+(drag mouse)&lt;/td&gt;
+&lt;td&gt;Column (box) selection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+Alt+(arrow key)&lt;/td&gt;
+&lt;td&gt;Column (box) selection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+Alt+PgUp/PgDn&lt;/td&gt;
+&lt;td&gt;Column(box)selection page up/down&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://emandeguzman.github.io/posts/multiline-edit/ - This is a customized copyright.</description>
+        </item>
     
     
     
