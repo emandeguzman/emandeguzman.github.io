@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Tags</title>
+<title>Git Submodules</title>
 
 
 
@@ -10,25 +10,26 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+<meta name="description" content="Some basic comnands when using git submodules">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content="Tags" />
-<meta property="og:description" content="My HomePage Description" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://emandeguzman.github.io/tags/" />
-<meta property="og:updated_time" content="2021-05-22T11:13:45+08:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:title" content="Git Submodules" />
+<meta property="og:description" content="Some basic comnands when using git submodules" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://emandeguzman.github.io/posts/git-submodules/" />
+<meta property="article:published_time" content="2021-05-22T11:13:45+08:00" />
+<meta property="article:modified_time" content="2021-05-22T11:13:45+08:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="My HomePage Description"/>
+<meta name="twitter:title" content="Git Submodules"/>
+<meta name="twitter:description" content="Some basic comnands when using git submodules"/>
 
 
 
@@ -66,6 +67,10 @@
 
 
 
+  
+    <script src="/js/toc.js"></script>
+  
+
 
 
 
@@ -101,9 +106,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/posts">
+            
+            <a class="a-block nav-link-item active" href="/posts">
                 Archive
             </a>
             
@@ -121,11 +128,9 @@
             
             
             
-                
             
             
-            
-            <a class="a-block nav-link-item active" href="/tags">
+            <a class="a-block nav-link-item false" href="/tags">
                 Tags
             </a>
             
@@ -161,6 +166,48 @@
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#delete-a-submodule" onclick="onNavClick(`#delete-a-submodule-nav`)" id="delete-a-submodule-nav">
+									Delete a Submodule
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -178,8 +225,6 @@
         </a>
         
         
-        
-        
     </div>
 </div>
 <div class="single-column-drawer-container" ref="drawer"
@@ -192,9 +237,11 @@
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/posts">
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
                     Archive
                 </a>
                 
@@ -212,11 +259,9 @@
                 
                 
                 
-                    
                 
                 
-                
-                <a class="a-block drawer-menu-item active" href="/tags">
+                <a class="a-block drawer-menu-item false" href="/tags">
                     Tags
                 </a>
                 
@@ -231,6 +276,48 @@
                 </a>
                 
             
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#delete-a-submodule" onclick="onNavClick(`#delete-a-submodule-nav`)" id="delete-a-submodule-nav">
+									Delete a Submodule
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
             
         </div>
     </div>
@@ -275,111 +362,134 @@
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <a class="a-block">
-            <div class="post-item-wrapper post-item-wrapper-no-hover">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title post-item-title-small">
-                            Tags
-                        </div>
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Git Submodules
+                    
+                    <div class="post-subtitle">
+                        Some basic comnands when using git submodules
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-05-22 11:13
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/snippet">Snippet</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/git">Git</a>
+                                &nbsp;
+                            
+                        
+                        
                     </div>
                 </div>
             </div>
-        </a>
-        
-        
-                <a href="https://emandeguzman.github.io/tags/git/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Git
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="delete-a-submodule">Delete a Submodule</h2>
+<ol>
+<li>
+<p>Open <code>.gitmodules</code> and remove the entry of the submodule to delete</p>
+<p>Sample entry to remove from .gitmodules</p>
+<pre><code>[submodule &quot;path/to/submodule/folder&quot;]
+    path = path/to/submodule/folder
+    url = https://github.com/submodule/to_delete.git
+</code></pre><p> <br>
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>Stage the changes in .gitmodules</p>
+<pre><code>git add .gitmodules
+</code></pre><p> <br>
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>Open <code>.git/config</code> and remove the entry of the submodule to delete</p>
+<p>Sample entry to remove from .git/config</p>
+<pre><code>[submodule &quot;path/to/submodule/folder&quot;]
+    url = https://github.com/submodule/to_delete.git
+    active = true
+</code></pre><p> <br>
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>Delete submodule folder using git rm</p>
+<pre><code>git rm --cached path/to/submodule/folder
+</code></pre><p> <br>
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>Delete submodule directory under <code>.git/modules</code></p>
+<pre><code>rm -rf .git/modules/name_of_submodule_to_delete
+</code></pre><p> <br>
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>Commit changes done so far</p>
+<pre><code>git commit -m &quot;Removed submodule &lt;submodule name&gt;&quot;
+</code></pre><p> <br>
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>Make sure there are no more files of the deleted submodule</p>
+<pre><code>    rm -rf path/to/submodule/folder
+</code></pre></li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-05-22</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
                 </a>
-        
-                <a href="https://emandeguzman.github.io/tags/vs-code/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    VS Code
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+                
+                
+                <a class="older-posts" href="https://emandeguzman.github.io/posts/multiline-edit/">
+			Previous<br>VS Code Key Bindings for Multi-line Editing
                 </a>
-        
-                <a href="https://emandeguzman.github.io/tags/css/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    CSS
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/html/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    HTML
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/meta-tags/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Meta Tags
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/safari/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Safari
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/javascript/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Javascript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+                <p style="opacity: 0.6" align="center">
+                    <small>Comments Disabled.</small>
+                </p>
+                
+            </div>
+        </div>
     </div>
 </div>
 
-
-            </div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 
 <br>
 
@@ -646,6 +756,9 @@ app = new Vue({
             elem.classList.add("table-hover");
         })
 
+        
+        spy();
+        window.addEventListener('scroll', this.debounce(spy, 250, { 'maxWait': 250 }), false);
         
         
     },

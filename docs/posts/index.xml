@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Fri, 21 May 2021 13:45:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 May 2021 11:13:45 +0800</lastBuildDate>
     
 	<atom:link href="https://emandeguzman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Submodules</title>
+      <link>https://emandeguzman.github.io/posts/git-submodules/</link>
+      <pubDate>Sat, 22 May 2021 11:13:45 +0800</pubDate>
+      
+      <guid>https://emandeguzman.github.io/posts/git-submodules/</guid>
+      <description>Delete a Submodule   Open .gitmodules and remove the entry of the submodule to delete
+Sample entry to remove from .gitmodules
+[submodule &amp;quot;path/to/submodule/folder&amp;quot;] path = path/to/submodule/folder url = https://github.com/submodule/to_delete.git    Stage the changes in .gitmodules
+git add .gitmodules    Open .git/config and remove the entry of the submodule to delete
+Sample entry to remove from .git/config
+[submodule &amp;quot;path/to/submodule/folder&amp;quot;] url = https://github.com/submodule/to_delete.git active = true    Delete submodule folder using git rm</description>
+    </item>
     
     <item>
       <title>VS Code Key Bindings for Multi-line Editing</title>
@@ -39,7 +53,8 @@
       <description>Motivation I encountered this situation where Safari&amp;rsquo;s display would overflow when the keyboard shows up. This ruins the whole page even when the elements have a width of 100% and body has and overflow-x hidden set.
 Solution In head, add a meta tag for viewport like
  meta name=&amp;quot;viewport&amp;rdquo; content=&amp;quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0&amp;quot;&amp;gt;
- width would set the viewport&amp;rsquo;s width to that of the device&amp;rsquo;s width. initial-scale makes sure the zoom level is initially set to 1 (100%).</description>
+ width would set the viewport&amp;rsquo;s width to that of the device&amp;rsquo;s width.
+initial-scale makes sure the zoom level is initially set to 1 (100%).</description>
     </item>
     
     <item>
@@ -48,7 +63,9 @@ Solution In head, add a meta tag for viewport like
       <pubDate>Sun, 16 May 2021 07:31:27 +0800</pubDate>
       
       <guid>https://emandeguzman.github.io/posts/waitfor/</guid>
-      <description>Motivation With the use of defer/async to load javascipts, it has become apparent that we must make sure that the javascript function, object, variables are loaded before referring to the those items. waitFor checks for the presence of these items then runs the provided callback function (if any) once the checked item is loaded and ready for use. waitFor returns a Promise so it can also be used in a promise chain.</description>
+      <description>Motivation With the use of defer/async to load javascipts, it has become apparent that we must make sure that the javascript function, object, variables are loaded before referring to the those items.
+waitFor checks for the presence of these items then runs the provided callback function (if any) once the checked item is loaded and ready for use.
+waitFor returns a Promise so it can also be used in a promise chain.</description>
     </item>
     
   </channel>

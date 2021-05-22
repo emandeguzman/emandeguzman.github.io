@@ -73,24 +73,6 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="/vendor/js/md5.min.js"></script>
-<script>
-  var gitalk = new Gitalk({
-  clientID: 'your client id',
-  clientSecret: 'your client secret',
-  repo: 'repo name',
-  owner: 'user',
-  admin: ['user'],
-  id: md5(location.pathname),
-  distractionFreeMode: 'false'
-  });
-  window.onload = function () {
-        gitalk.render('gitalk-container')
-  }
-</script>
-
 
 
 
@@ -641,8 +623,8 @@
                 <div class="post-body" v-pre>
                 
                     <h2 id="motivation">Motivation</h2>
-<p>With the use of defer/async to load javascipts, it has become apparent that we must make sure that the javascript function, object, variables are loaded before referring to the those items.
-waitFor checks for the presence of these items then runs the provided callback function (if any) once the checked item is loaded and ready for use.
+<p>With the use of defer/async to load javascipts, it has become apparent that we must make sure that the javascript function, object, variables are loaded before referring to the those items.<br>
+waitFor checks for the presence of these items then runs the provided callback function (if any) once the checked item is loaded and ready for use.<br>
 waitFor returns a Promise so it can also be used in a promise chain. This is especially usefull when checking for existence of a function since you cannot reference a non-defined function in the callback.</p>
 <h2 id="syntax">Syntax</h2>
 <pre><code>waitFor(&lt;item to check&gt;, &lt;item type&gt;, [callback function])

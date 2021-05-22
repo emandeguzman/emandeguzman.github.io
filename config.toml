@@ -26,10 +26,15 @@ publishDir = "docs"
 #     noClasses = true
 #     style = "perldoc"
 #     tabWidth = 4
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            hardWraps = true
 
 [params]
 subtitle = "Tips and Tricks."
-enableGitalk = true
+#enableGitalk = true
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true

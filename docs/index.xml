@@ -6,9 +6,69 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Fri, 21 May 2021 13:45:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 May 2021 11:13:45 +0800</lastBuildDate>
     
         <atom:link href="https://emandeguzman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Git Submodules</title>
+        <link>https://emandeguzman.github.io/posts/git-submodules/</link>
+        <pubDate>Sat, 22 May 2021 11:13:45 +0800</pubDate>
+        
+        <guid>https://emandeguzman.github.io/posts/git-submodules/</guid>
+        <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/git-submodules/ -&lt;h2 id=&#34;delete-a-submodule&#34;&gt;Delete a Submodule&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;.gitmodules&lt;/code&gt; and remove the entry of the submodule to delete&lt;/p&gt;
+&lt;p&gt;Sample entry to remove from .gitmodules&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[submodule &amp;quot;path/to/submodule/folder&amp;quot;]
+    path = path/to/submodule/folder
+    url = https://github.com/submodule/to_delete.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stage the changes in .gitmodules&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add .gitmodules
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;.git/config&lt;/code&gt; and remove the entry of the submodule to delete&lt;/p&gt;
+&lt;p&gt;Sample entry to remove from .git/config&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[submodule &amp;quot;path/to/submodule/folder&amp;quot;]
+    url = https://github.com/submodule/to_delete.git
+    active = true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete submodule folder using git rm&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git rm --cached path/to/submodule/folder
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete submodule directory under &lt;code&gt;.git/modules&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rm -rf .git/modules/name_of_submodule_to_delete
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Commit changes done so far&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;Removed submodule &amp;lt;submodule name&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure there are no more files of the deleted submodule&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    rm -rf path/to/submodule/folder
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+- https://emandeguzman.github.io/posts/git-submodules/ - This is a customized copyright.</description>
+        </item>
     
     
     
@@ -146,10 +206,10 @@
 &lt;blockquote&gt;
 &lt;p&gt;meta name=&amp;quot;viewport&amp;rdquo; content=&amp;quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0&amp;quot;&amp;gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;width&lt;/strong&gt; would set the viewport&amp;rsquo;s width to that of the device&amp;rsquo;s width.
-&lt;strong&gt;initial-scale&lt;/strong&gt; makes sure the zoom level is initially set to 1 (100%).
-&lt;strong&gt;maximum-scale&lt;/strong&gt; prevent&amp;rsquo;s zooming beyond 100%.
-&lt;strong&gt;user-scalable&lt;/strong&gt; disallows the device to zoom in or out.
+&lt;p&gt;&lt;strong&gt;width&lt;/strong&gt; would set the viewport&amp;rsquo;s width to that of the device&amp;rsquo;s width.&lt;br&gt;
+&lt;strong&gt;initial-scale&lt;/strong&gt; makes sure the zoom level is initially set to 1 (100%).&lt;br&gt;
+&lt;strong&gt;maximum-scale&lt;/strong&gt; prevent&amp;rsquo;s zooming beyond 100%.&lt;br&gt;
+&lt;strong&gt;user-scalable&lt;/strong&gt; disallows the device to zoom in or out.&lt;br&gt;
 &lt;strong&gt;minimum-scale&lt;/strong&gt; though not included in the fix. I just added it here for completeness. This sets the minimum amount of zooming the can be done for the device.&lt;/p&gt;
 - https://emandeguzman.github.io/posts/safari_overflow/ - This is a customized copyright.</description>
         </item>
@@ -163,8 +223,8 @@
         
         <guid>https://emandeguzman.github.io/posts/waitfor/</guid>
         <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/waitfor/ -&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
-&lt;p&gt;With the use of defer/async to load javascipts, it has become apparent that we must make sure that the javascript function, object, variables are loaded before referring to the those items.
-waitFor checks for the presence of these items then runs the provided callback function (if any) once the checked item is loaded and ready for use.
+&lt;p&gt;With the use of defer/async to load javascipts, it has become apparent that we must make sure that the javascript function, object, variables are loaded before referring to the those items.&lt;br&gt;
+waitFor checks for the presence of these items then runs the provided callback function (if any) once the checked item is loaded and ready for use.&lt;br&gt;
 waitFor returns a Promise so it can also be used in a promise chain. This is especially usefull when checking for existence of a function since you cannot reference a non-defined function in the callback.&lt;/p&gt;
 &lt;h2 id=&#34;syntax&#34;&gt;Syntax&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;waitFor(&amp;lt;item to check&amp;gt;, &amp;lt;item type&amp;gt;, [callback function])

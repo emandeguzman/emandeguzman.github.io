@@ -73,24 +73,6 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="/vendor/js/md5.min.js"></script>
-<script>
-  var gitalk = new Gitalk({
-  clientID: 'your client id',
-  clientSecret: 'your client secret',
-  repo: 'repo name',
-  owner: 'user',
-  admin: ['user'],
-  id: md5(location.pathname),
-  distractionFreeMode: 'false'
-  });
-  window.onload = function () {
-        gitalk.render('gitalk-container')
-  }
-</script>
-
 
 
 
@@ -473,10 +455,10 @@
 <blockquote>
 <p>meta name=&quot;viewport&rdquo; content=&quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0&quot;&gt;</p>
 </blockquote>
-<p><strong>width</strong> would set the viewport&rsquo;s width to that of the device&rsquo;s width.
-<strong>initial-scale</strong> makes sure the zoom level is initially set to 1 (100%).
-<strong>maximum-scale</strong> prevent&rsquo;s zooming beyond 100%.
-<strong>user-scalable</strong> disallows the device to zoom in or out.
+<p><strong>width</strong> would set the viewport&rsquo;s width to that of the device&rsquo;s width.<br>
+<strong>initial-scale</strong> makes sure the zoom level is initially set to 1 (100%).<br>
+<strong>maximum-scale</strong> prevent&rsquo;s zooming beyond 100%.<br>
+<strong>user-scalable</strong> disallows the device to zoom in or out.<br>
 <strong>minimum-scale</strong> though not included in the fix. I just added it here for completeness. This sets the minimum amount of zooming the can be done for the device.</p>
 
                     
