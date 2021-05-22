@@ -1,7 +1,7 @@
 ---
 title: "Git Submodules"
 date: 2021-05-22T11:13:45+08:00
-description: "Some basic comnands when using git submodules"
+description: "Some basic commands when using git submodules"
 tags: [Git]
 # featured_image: "/images/notebook.jpg"
 categories: Snippet
