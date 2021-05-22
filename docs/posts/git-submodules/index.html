@@ -174,7 +174,7 @@
 		
 		
 		
-		<center>- CATALOG -</center>
+		<center>- CONTENTS -</center>
 		
 		
 		<ul>
@@ -194,8 +194,44 @@
 						
 						
 							<li>
+								<a href="#adding-a-submodule" onclick="onNavClick(`#adding-a-submodule-nav`)" id="adding-a-submodule-nav">
+									Adding a submodule
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cloning-a-repository-with-submodules" onclick="onNavClick(`#cloning-a-repository-with-submodules-nav`)" id="cloning-a-repository-with-submodules-nav">
+									Cloning a repository with submodules
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
 								<a href="#delete-a-submodule" onclick="onNavClick(`#delete-a-submodule-nav`)" id="delete-a-submodule-nav">
-									Delete a Submodule
+									Delete a submodule
 								</a>
 							</li>
 						
@@ -285,7 +321,7 @@
 		
 		
 		
-		<center>- CATALOG -</center>
+		<center>- CONTENTS -</center>
 		
 		
 		<ul>
@@ -305,8 +341,44 @@
 						
 						
 							<li>
+								<a href="#adding-a-submodule" onclick="onNavClick(`#adding-a-submodule-nav`)" id="adding-a-submodule-nav">
+									Adding a submodule
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cloning-a-repository-with-submodules" onclick="onNavClick(`#cloning-a-repository-with-submodules-nav`)" id="cloning-a-repository-with-submodules-nav">
+									Cloning a repository with submodules
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
 								<a href="#delete-a-submodule" onclick="onNavClick(`#delete-a-submodule-nav`)" id="delete-a-submodule-nav">
-									Delete a Submodule
+									Delete a submodule
 								</a>
 							</li>
 						
@@ -406,7 +478,48 @@
                 
                 <div class="post-body" v-pre>
                 
-                    <h2 id="delete-a-submodule">Delete a Submodule</h2>
+                    <h2 id="adding-a-submodule">Adding a submodule</h2>
+<p>Inside your repository, execute the following command.</p>
+<blockquote>
+<p>git submodule add <a href="https://github.com/submodule/to_add.git">https://github.com/submodule/to_add.git</a> /folder/to/put/submodule</p>
+</blockquote>
+<p> <br>
+<!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<h2 id="cloning-a-repository-with-submodules">Cloning a repository with submodules</h2>
+<ul>
+<li>
+<p>Method 1</p>
+<ol>
+<li>Clone the repository</li>
+</ol>
+<blockquote>
+<p>git clone <a href="https://github.com/repository/to_clone.git">https://github.com/repository/to_clone.git</a></p>
+</blockquote>
+<p> <br>
+<!-- raw HTML omitted --></p>
+<ol start="2">
+<li>Go to each submodules folder then initialize and update</li>
+</ol>
+<blockquote>
+<p>cd submodule/folder<br>
+git submodule init<br>
+git submodule update</p>
+</blockquote>
+</li>
+<li>
+<p>Method 2</p>
+<blockquote>
+<p>git clone &ndash;recurse-submodules <a href="https://github.com/repository/to_clone.git">https://github.com/repository/to_clone.git</a></p>
+</blockquote>
+<p>The <strong>&ndash;recurse-submodules</strong> option will automaticallu initialize and update all submodules</p>
+</li>
+</ul>
+<p>Method 1 has the advantage of selecting only those submodules you wish to downloading (initialize and update).</p>
+<p> <br>
+<!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<h2 id="delete-a-submodule">Delete a submodule</h2>
 <ol>
 <li>
 <p>Open <code>.gitmodules</code> and remove the entry of the submodule to delete</p>
@@ -419,8 +532,10 @@
 </li>
 <li>
 <p>Stage the changes in .gitmodules</p>
-<pre><code>git add .gitmodules
-</code></pre><p> <br>
+<blockquote>
+<p>git add .gitmodules</p>
+</blockquote>
+<p> <br>
 <!-- raw HTML omitted --></p>
 </li>
 <li>
@@ -434,26 +549,34 @@
 </li>
 <li>
 <p>Delete submodule folder using git rm</p>
-<pre><code>git rm --cached path/to/submodule/folder
-</code></pre><p> <br>
+<blockquote>
+<p>git rm &ndash;cached path/to/submodule/folder</p>
+</blockquote>
+<p> <br>
 <!-- raw HTML omitted --></p>
 </li>
 <li>
 <p>Delete submodule directory under <code>.git/modules</code></p>
-<pre><code>rm -rf .git/modules/name_of_submodule_to_delete
-</code></pre><p> <br>
+<blockquote>
+<p>rm -rf .git/modules/name_of_submodule_to_delete</p>
+</blockquote>
+<p> <br>
 <!-- raw HTML omitted --></p>
 </li>
 <li>
 <p>Commit changes done so far</p>
-<pre><code>git commit -m &quot;Removed submodule &lt;submodule name&gt;&quot;
-</code></pre><p> <br>
+<blockquote>
+<p>git commit -m &ldquo;Removed submodule <!-- raw HTML omitted -->&rdquo;</p>
+</blockquote>
+<p> <br>
 <!-- raw HTML omitted --></p>
 </li>
 <li>
 <p>Make sure there are no more files of the deleted submodule</p>
-<pre><code>    rm -rf path/to/submodule/folder
-</code></pre></li>
+<blockquote>
+<p>rm -rf path/to/submodule/folder</p>
+</blockquote>
+</li>
 </ol>
 
                     

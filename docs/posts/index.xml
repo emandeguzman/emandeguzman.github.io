@@ -18,12 +18,16 @@
       <pubDate>Sat, 22 May 2021 11:13:45 +0800</pubDate>
       
       <guid>https://emandeguzman.github.io/posts/git-submodules/</guid>
-      <description>Delete a Submodule   Open .gitmodules and remove the entry of the submodule to delete
-Sample entry to remove from .gitmodules
-[submodule &amp;quot;path/to/submodule/folder&amp;quot;] path = path/to/submodule/folder url = https://github.com/submodule/to_delete.git    Stage the changes in .gitmodules
-git add .gitmodules    Open .git/config and remove the entry of the submodule to delete
-Sample entry to remove from .git/config
-[submodule &amp;quot;path/to/submodule/folder&amp;quot;] url = https://github.com/submodule/to_delete.git active = true    Delete submodule folder using git rm</description>
+      <description>Adding a submodule Inside your repository, execute the following command.
+ git submodule add https://github.com/submodule/to_add.git /folder/to/put/submodule
+  Cloning a repository with submodules   Method 1
+ Clone the repository   git clone https://github.com/repository/to_clone.git
+  Go to each submodules folder then initialize and update   cd submodule/folder
+git submodule init
+git submodule update
+   Method 2
+ git clone &amp;ndash;recurse-submodules https://github.com/repository/to_clone.git
+ The &amp;ndash;recurse-submodules option will automaticallu initialize and update all submodules</description>
     </item>
     
     <item>

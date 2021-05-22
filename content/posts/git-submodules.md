@@ -7,8 +7,40 @@ tags: [Git]
 categories: Snippet
 comment : false
 ---
+## Adding a submodule
+Inside your repository, execute the following command.
+> git submodule add https://github.com/submodule/to_add.git /folder/to/put/submodule
 
-## Delete a Submodule
+&nbsp;
+<br>
+<br>
+
+## Cloning a repository with submodules
+
+- Method 1 
+    1. Clone the repository
+    > git clone https://github.com/repository/to_clone.git
+
+    &nbsp;
+    <br>
+
+    2. Go to each submodules folder then initialize and update 
+    > cd submodule/folder
+    > git submodule init
+    > git submodule update
+
+- Method 2
+    > git clone --recurse-submodules https://github.com/repository/to_clone.git
+    
+    The **--recurse-submodules** option will automaticallu initialize and update all submodules
+
+Method 1 has the advantage of selecting only those submodules you wish to downloading (initialize and update).
+
+&nbsp;
+<br>
+<br>
+
+## Delete a submodule
 
 1. Open `.gitmodules` and remove the entry of the submodule to delete
     
@@ -24,9 +56,8 @@ comment : false
 
 
 2. Stage the changes in .gitmodules
-    ```
-    git add .gitmodules
-    ```
+    > git add .gitmodules
+
     &nbsp;
     <br>
 
@@ -46,33 +77,28 @@ comment : false
 
 
 4. Delete submodule folder using git rm
-    ```
-    git rm --cached path/to/submodule/folder
-    ```
+    > git rm --cached path/to/submodule/folder
+
     &nbsp;
     <br>
 
 
 
 5. Delete submodule directory under `.git/modules`
-    ```
-    rm -rf .git/modules/name_of_submodule_to_delete
-    ```
+    > rm -rf .git/modules/name_of_submodule_to_delete
+
     &nbsp;
     <br>
 
 
 
 6. Commit changes done so far
-    ```
-    git commit -m "Removed submodule <submodule name>"
-    ```
+    > git commit -m "Removed submodule <submodule name>"
+
     &nbsp;
     <br>
 
 
 
 7. Make sure there are no more files of the deleted submodule
-    ```
-        rm -rf path/to/submodule/folder
-    ```
+    > rm -rf path/to/submodule/folder

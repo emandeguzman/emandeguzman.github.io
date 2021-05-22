@@ -18,7 +18,48 @@
         <pubDate>Sat, 22 May 2021 11:13:45 +0800</pubDate>
         
         <guid>https://emandeguzman.github.io/posts/git-submodules/</guid>
-        <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/git-submodules/ -&lt;h2 id=&#34;delete-a-submodule&#34;&gt;Delete a Submodule&lt;/h2&gt;
+        <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/git-submodules/ -&lt;h2 id=&#34;adding-a-submodule&#34;&gt;Adding a submodule&lt;/h2&gt;
+&lt;p&gt;Inside your repository, execute the following command.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git submodule add &lt;a href=&#34;https://github.com/submodule/to_add.git&#34;&gt;https://github.com/submodule/to_add.git&lt;/a&gt; /folder/to/put/submodule&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cloning-a-repository-with-submodules&#34;&gt;Cloning a repository with submodules&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Method 1&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone the repository&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git clone &lt;a href=&#34;https://github.com/repository/to_clone.git&#34;&gt;https://github.com/repository/to_clone.git&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Go to each submodules folder then initialize and update&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cd submodule/folder&lt;br&gt;
+git submodule init&lt;br&gt;
+git submodule update&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Method 2&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git clone &amp;ndash;recurse-submodules &lt;a href=&#34;https://github.com/repository/to_clone.git&#34;&gt;https://github.com/repository/to_clone.git&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The &lt;strong&gt;&amp;ndash;recurse-submodules&lt;/strong&gt; option will automaticallu initialize and update all submodules&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Method 1 has the advantage of selecting only those submodules you wish to downloading (initialize and update).&lt;/p&gt;
+&lt;p&gt; &lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;delete-a-submodule&#34;&gt;Delete a submodule&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Open &lt;code&gt;.gitmodules&lt;/code&gt; and remove the entry of the submodule to delete&lt;/p&gt;
@@ -31,8 +72,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Stage the changes in .gitmodules&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git add .gitmodules
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git add .gitmodules&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -46,26 +89,34 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Delete submodule folder using git rm&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git rm --cached path/to/submodule/folder
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git rm &amp;ndash;cached path/to/submodule/folder&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Delete submodule directory under &lt;code&gt;.git/modules&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;rm -rf .git/modules/name_of_submodule_to_delete
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;rm -rf .git/modules/name_of_submodule_to_delete&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Commit changes done so far&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;Removed submodule &amp;lt;submodule name&amp;gt;&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; &lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git commit -m &amp;ldquo;Removed submodule &lt;!-- raw HTML omitted --&gt;&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Make sure there are no more files of the deleted submodule&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    rm -rf path/to/submodule/folder
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;rm -rf path/to/submodule/folder&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 - https://emandeguzman.github.io/posts/git-submodules/ - This is a customized copyright.</description>
         </item>
