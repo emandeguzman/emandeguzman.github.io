@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CSS on Eman&#39;s Blog</title>
-    <link>https://emandeguzman.github.io/tags/css/</link>
-    <description>Recent content in CSS on Eman&#39;s Blog</description>
+    <title>Knowlegebase on Eman&#39;s Blog</title>
+    <link>https://emandeguzman.github.io/categories/knowlegebase/</link>
+    <description>Recent content in Knowlegebase on Eman&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>eman de guzman (emandeguzman@gmail.com)</copyright>
     <lastBuildDate>Tue, 25 May 2021 15:13:59 +0800</lastBuildDate>
     
-	<atom:link href="https://emandeguzman.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://emandeguzman.github.io/categories/knowlegebase/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>https://emandeguzman.github.io/posts/inline_vs_inlineblock/</guid>
       <description>    inline inline-block     width [ ] [x]   height [ ] [x]   top [ ] [x]   bottom [ ] [x]   margin [ ] [x]   padding [ ] [x]    </description>
-    </item>
-    
-    <item>
-      <title>Different ways of hiding elements</title>
-      <link>https://emandeguzman.github.io/posts/hiding_elements/</link>
-      <pubDate>Tue, 18 May 2021 15:50:28 +0800</pubDate>
-      
-      <guid>https://emandeguzman.github.io/posts/hiding_elements/</guid>
-      <description>   Method read byscreen reader affectsdocument layout rendered respondsto events     display: none no no no no   visibility=hidden no yes yes no   opacity=0 yes yes yes yes   position=absolute yes no yes yes    </description>
     </item>
     
   </channel>

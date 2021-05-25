@@ -5,10 +5,62 @@
     <description>Recent content on Eman&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Sat, 22 May 2021 11:13:45 +0800</lastBuildDate>
+    <copyright>eman de guzman (emandeguzman@gmail.com)</copyright>
+    <lastBuildDate>Tue, 25 May 2021 15:13:59 +0800</lastBuildDate>
     
         <atom:link href="https://emandeguzman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>inline vs inline-block</title>
+        <link>https://emandeguzman.github.io/posts/inline_vs_inlineblock/</link>
+        <pubDate>Tue, 25 May 2021 15:13:59 +0800</pubDate>
+        
+        <guid>https://emandeguzman.github.io/posts/inline_vs_inlineblock/</guid>
+        <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/inline_vs_inlineblock/ -&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;inline&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;inline-block&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;width&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;height&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;top&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bottom&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;margin&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;padding&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://emandeguzman.github.io/posts/inline_vs_inlineblock/ - eman de guzman (emandeguzman@gmail.com)</description>
+        </item>
     
     
     
@@ -118,7 +170,7 @@ git submodule update&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-- https://emandeguzman.github.io/posts/git-submodules/ - This is a customized copyright.</description>
+- https://emandeguzman.github.io/posts/git-submodules/ - eman de guzman (emandeguzman@gmail.com)</description>
         </item>
     
     
@@ -187,7 +239,7 @@ git submodule update&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-- https://emandeguzman.github.io/posts/multiline-edit/ - This is a customized copyright.</description>
+- https://emandeguzman.github.io/posts/multiline-edit/ - eman de guzman (emandeguzman@gmail.com)</description>
         </item>
     
     
@@ -239,7 +291,7 @@ git submodule update&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-- https://emandeguzman.github.io/posts/hiding_elements/ - This is a customized copyright.</description>
+- https://emandeguzman.github.io/posts/hiding_elements/ - eman de guzman (emandeguzman@gmail.com)</description>
         </item>
     
     
@@ -262,7 +314,7 @@ git submodule update&lt;/p&gt;
 &lt;strong&gt;maximum-scale&lt;/strong&gt; prevent&amp;rsquo;s zooming beyond 100%.&lt;br&gt;
 &lt;strong&gt;user-scalable&lt;/strong&gt; disallows the device to zoom in or out.&lt;br&gt;
 &lt;strong&gt;minimum-scale&lt;/strong&gt; though not included in the fix. I just added it here for completeness. This sets the minimum amount of zooming the can be done for the device.&lt;/p&gt;
-- https://emandeguzman.github.io/posts/safari_overflow/ - This is a customized copyright.</description>
+- https://emandeguzman.github.io/posts/safari_overflow/ - eman de guzman (emandeguzman@gmail.com)</description>
         </item>
     
     
@@ -384,7 +436,7 @@ waitFor returns a Promise so it can also be used in a promise chain. This is esp
         })();
     })
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://emandeguzman.github.io/posts/waitfor/ - This is a customized copyright.</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://emandeguzman.github.io/posts/waitfor/ - eman de guzman (emandeguzman@gmail.com)</description>
         </item>
     
     

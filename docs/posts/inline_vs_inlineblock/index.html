@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Tags</title>
+<title>inline vs inline-block</title>
 
 
 
@@ -10,25 +10,26 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+<meta name="description" content="Difference between inline and inline-block.">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content="Tags" />
-<meta property="og:description" content="My HomePage Description" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://emandeguzman.github.io/tags/" />
-<meta property="og:updated_time" content="2021-05-25T15:13:59+08:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:title" content="inline vs inline-block" />
+<meta property="og:description" content="Difference between inline and inline-block." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://emandeguzman.github.io/posts/inline_vs_inlineblock/" />
+<meta property="article:published_time" content="2021-05-25T15:13:59+08:00" />
+<meta property="article:modified_time" content="2021-05-25T15:13:59+08:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="My HomePage Description"/>
+<meta name="twitter:title" content="inline vs inline-block"/>
+<meta name="twitter:description" content="Difference between inline and inline-block."/>
 
 
 
@@ -66,6 +67,10 @@
 
 
 
+  
+    <script src="/js/toc.js"></script>
+  
+
 
 
 
@@ -101,9 +106,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/posts">
+            
+            <a class="a-block nav-link-item active" href="/posts">
                 Archive
             </a>
             
@@ -121,11 +128,9 @@
             
             
             
-                
             
             
-            
-            <a class="a-block nav-link-item active" href="/tags">
+            <a class="a-block nav-link-item false" href="/tags">
                 Tags
             </a>
             
@@ -161,6 +166,11 @@
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -178,8 +188,6 @@
         </a>
         
         
-        
-        
     </div>
 </div>
 <div class="single-column-drawer-container" ref="drawer"
@@ -192,9 +200,11 @@
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/posts">
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
                     Archive
                 </a>
                 
@@ -212,11 +222,9 @@
                 
                 
                 
-                    
                 
                 
-                
-                <a class="a-block drawer-menu-item active" href="/tags">
+                <a class="a-block drawer-menu-item false" href="/tags">
                     Tags
                 </a>
                 
@@ -231,6 +239,11 @@
                 </a>
                 
             
+            
+            <div class="toc">
+
+
+</div>
             
         </div>
     </div>
@@ -275,111 +288,126 @@
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <a class="a-block">
-            <div class="post-item-wrapper post-item-wrapper-no-hover">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title post-item-title-small">
-                            Tags
-                        </div>
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    inline vs inline-block
+                    
+                    <div class="post-subtitle">
+                        Difference between inline and inline-block.
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-05-25 15:13
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/knowlegebase">Knowlegebase</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/css">CSS</a>
+                                &nbsp;
+                            
+                        
+                        
                     </div>
                 </div>
             </div>
-        </a>
-        
-        
-                <a href="https://emandeguzman.github.io/tags/css/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    CSS
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <table>
+<thead>
+<tr>
+<th></th>
+<th align="center">inline</th>
+<th align="center">inline-block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td align="center">[ ]</td>
+<td align="center">[x]</td>
+</tr>
+<tr>
+<td>height</td>
+<td align="center">[ ]</td>
+<td align="center">[x]</td>
+</tr>
+<tr>
+<td>top</td>
+<td align="center">[ ]</td>
+<td align="center">[x]</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td align="center">[ ]</td>
+<td align="center">[x]</td>
+</tr>
+<tr>
+<td>margin</td>
+<td align="center">[ ]</td>
+<td align="center">[x]</td>
+</tr>
+<tr>
+<td>padding</td>
+<td align="center">[ ]</td>
+<td align="center">[x]</td>
+</tr>
+</tbody>
+</table>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-05-25</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
                 </a>
-        
-                <a href="https://emandeguzman.github.io/tags/git/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Git
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+                
+                
+                <a class="older-posts" href="https://emandeguzman.github.io/posts/git-submodules/">
+			Previous<br>Git Submodules
                 </a>
-        
-                <a href="https://emandeguzman.github.io/tags/vs-code/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    VS Code
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/html/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    HTML
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/meta-tags/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Meta Tags
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/safari/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Safari
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/javascript/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Javascript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+                <p style="opacity: 0.6" align="center">
+                    <small>Comments Disabled.</small>
+                </p>
+                
+            </div>
+        </div>
     </div>
 </div>
 
-
-            </div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 
 <br>
 
@@ -646,6 +674,9 @@ app = new Vue({
             elem.classList.add("table-hover");
         })
 
+        
+        spy();
+        window.addEventListener('scroll', this.debounce(spy, 250, { 'maxWait': 250 }), false);
         
         
     },

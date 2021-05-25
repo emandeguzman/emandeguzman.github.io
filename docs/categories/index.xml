@@ -6,11 +6,20 @@
     <description>Recent content in Categories on Eman&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Sat, 22 May 2021 11:13:45 +0800</lastBuildDate>
+    <copyright>eman de guzman (emandeguzman@gmail.com)</copyright>
+    <lastBuildDate>Tue, 25 May 2021 15:13:59 +0800</lastBuildDate>
     
 	<atom:link href="https://emandeguzman.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Knowlegebase</title>
+      <link>https://emandeguzman.github.io/categories/knowlegebase/</link>
+      <pubDate>Tue, 25 May 2021 15:13:59 +0800</pubDate>
+      
+      <guid>https://emandeguzman.github.io/categories/knowlegebase/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Snippet</title>

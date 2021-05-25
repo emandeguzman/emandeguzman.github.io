@@ -6,11 +6,20 @@
     <description>Recent content in Posts on Eman&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Sat, 22 May 2021 11:13:45 +0800</lastBuildDate>
+    <copyright>eman de guzman (emandeguzman@gmail.com)</copyright>
+    <lastBuildDate>Tue, 25 May 2021 15:13:59 +0800</lastBuildDate>
     
 	<atom:link href="https://emandeguzman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>inline vs inline-block</title>
+      <link>https://emandeguzman.github.io/posts/inline_vs_inlineblock/</link>
+      <pubDate>Tue, 25 May 2021 15:13:59 +0800</pubDate>
+      
+      <guid>https://emandeguzman.github.io/posts/inline_vs_inlineblock/</guid>
+      <description>    inline inline-block     width [ ] [x]   height [ ] [x]   top [ ] [x]   bottom [ ] [x]   margin [ ] [x]   padding [ ] [x]    </description>
+    </item>
     
     <item>
       <title>Git Submodules</title>
