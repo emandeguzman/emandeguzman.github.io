@@ -1,14 +1,18 @@
 # baseURL = "http://localhost/"
 baseURL = "https://emandeguzman.github.io/"
-# DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
 title = "Eman's Blog"
 buidDrafts = false
 enableInlineShortcodes = true
-copyright = "This is a customized copyright."
+# theme = "anatole"
 theme = "diary"
-# googleAnalytics = "UA-123-45"
 publishDir = "docs"
+
+
+
+# DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
+copyright = "eman de guzman (emandeguzman@gmail.com)"
+# googleAnalytics = "UA-123-45"
 
 # [build]
 #   noJSConfigInAssets = false
