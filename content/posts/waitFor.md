@@ -60,18 +60,34 @@ waitFor will not run the callback function nore return a promise **item to check
     <script>
         // code for waitFor
         function waitFor(item, type, callback = ()=>{}){
-            return new Promise((resolve, reject)=>{
+            const [_type, _callback] = (()=>{
+                if (typeof type == "function") {return [undefined, type]}
+                if (typeof type == "string") {return [type, callback]}
+                throw new Error ("Invalid parameters for waitFor function");
+            })();
+
+            return new Promise(resolve=>{
                 (function check(){
-                    const itemType = (new Function(`return typeof ${item}`))();
-                    if (itemType !== "undefined") {
-                        if (itemType !== type) {reject(new Error(`Expecting "${item}" to be of type "${type}" but got "${itemType}" instead`))}
-                        else {callback()}
+                    try {
+                        const itemType = (new Function(`return typeof ${item}`))();
+                        if (itemType == "undefined" || itemType == "null") {
+                            throw new Error(`"${item}" is still ${itemType}`)
+                        }
+
+                        if (_type !== undefined) {
+                            if (itemType !== _type) {throw new Error(`Expecting "${item}" to be of type "${_type}" but got "${itemType}" instead`)}
+                        }
+
+                        _callback();
                         resolve();
+                    } 
+                    catch (error) {
+                        console.info(error);
+                        setTimeout(check, 500);
                     }
-                    else {setTimeout(check, 100)}
                 })();
             })
-        }
+        }        
     </script>
 
     <script>
@@ -104,15 +120,31 @@ waitFor will not run the callback function nore return a promise **item to check
 
 ```javascript
 function waitFor(item, type, callback = ()=>{}){
-    return new Promise((resolve, reject)=>{
+    const [_type, _callback] = (()=>{
+        if (typeof type == "function") {return [undefined, type]}
+        if (typeof type == "string") {return [type, callback]}
+        throw new Error ("Invalid parameters for waitFor function");
+    })();
+
+    return new Promise(resolve=>{
         (function check(){
-            const itemType = (new Function(`return typeof ${item}`))();
-            if (itemType !== "undefined") {
-                if (itemType !== type) {reject(new Error(`Expecting "${item}" to be of type "${type}" but got "${itemType}" instead`))}
-                else {callback()}
+            try {
+                const itemType = (new Function(`return typeof ${item}`))();
+                if (itemType == "undefined" || itemType == "null") {
+                    throw new Error(`"${item}" is still ${itemType}`)
+                }
+
+                if (_type !== undefined) {
+                    if (itemType !== _type) {throw new Error(`Expecting "${item}" to be of type "${_type}" but got "${itemType}" instead`)}
+                }
+
+                _callback();
                 resolve();
+            } 
+            catch (error) {
+                console.info(error);
+                setTimeout(check, 500);
             }
-            else {setTimeout(check, 100)}
         })();
     })
 }

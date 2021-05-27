@@ -683,18 +683,34 @@ waitFor returns a Promise so it can also be used in a promise chain. This is esp
     &lt;<span style="color:#f92672">script</span>&gt;
         <span style="color:#75715e">// code for waitFor
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">waitFor</span>(<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">type</span>, <span style="color:#a6e22e">callback</span> <span style="color:#f92672">=</span> ()=&gt;{}){
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>)=&gt;{
+            <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">_type</span>, <span style="color:#a6e22e">_callback</span>] <span style="color:#f92672">=</span> (()=&gt;{
+                <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;function&#34;</span>) {<span style="color:#66d9ef">return</span> [<span style="color:#66d9ef">undefined</span>, <span style="color:#a6e22e">type</span>]}
+                <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;string&#34;</span>) {<span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">type</span>, <span style="color:#a6e22e">callback</span>]}
+                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error (<span style="color:#e6db74">&#34;Invalid parameters for waitFor function&#34;</span>);
+            })();
+
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span>=&gt;{
                 (<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">check</span>(){
-                    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">itemType</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">`return typeof </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>))();
-                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">itemType</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#34;undefined&#34;</span>) {
-                        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">itemType</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">type</span>) {<span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`Expecting &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; to be of type &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">type</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; but got &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">itemType</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; instead`</span>))}
-                        <span style="color:#66d9ef">else</span> {<span style="color:#a6e22e">callback</span>()}
+                    <span style="color:#66d9ef">try</span> {
+                        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">itemType</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">`return typeof </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>))();
+                        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">itemType</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;undefined&#34;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">itemType</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;null&#34;</span>) {
+                            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; is still </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">itemType</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+                        }
+
+                        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">_type</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">undefined</span>) {
+                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">itemType</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">_type</span>) {<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`Expecting &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; to be of type &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">_type</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; but got &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">itemType</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; instead`</span>)}
+                        }
+
+                        <span style="color:#a6e22e">_callback</span>();
                         <span style="color:#a6e22e">resolve</span>();
+                    } 
+                    <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+                        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">error</span>);
+                        <span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">check</span>, <span style="color:#ae81ff">500</span>);
                     }
-                    <span style="color:#66d9ef">else</span> {<span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">check</span>, <span style="color:#ae81ff">100</span>)}
                 })();
             })
-        }
+        }        
     &lt;/<span style="color:#f92672">script</span>&gt;
 
     &lt;<span style="color:#f92672">script</span>&gt;
@@ -721,15 +737,31 @@ waitFor returns a Promise so it can also be used in a promise chain. This is esp
 &lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><h2 id="code">Code</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">waitFor</span>(<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">type</span>, <span style="color:#a6e22e">callback</span> <span style="color:#f92672">=</span> ()=&gt;{}){
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>)=&gt;{
+    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">_type</span>, <span style="color:#a6e22e">_callback</span>] <span style="color:#f92672">=</span> (()=&gt;{
+        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;function&#34;</span>) {<span style="color:#66d9ef">return</span> [<span style="color:#66d9ef">undefined</span>, <span style="color:#a6e22e">type</span>]}
+        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;string&#34;</span>) {<span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">type</span>, <span style="color:#a6e22e">callback</span>]}
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error (<span style="color:#e6db74">&#34;Invalid parameters for waitFor function&#34;</span>);
+    })();
+
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span>=&gt;{
         (<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">check</span>(){
-            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">itemType</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">`return typeof </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>))();
-            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">itemType</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#34;undefined&#34;</span>) {
-                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">itemType</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">type</span>) {<span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`Expecting &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; to be of type &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">type</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; but got &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">itemType</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; instead`</span>))}
-                <span style="color:#66d9ef">else</span> {<span style="color:#a6e22e">callback</span>()}
+            <span style="color:#66d9ef">try</span> {
+                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">itemType</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> Function(<span style="color:#e6db74">`return typeof </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>))();
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">itemType</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;undefined&#34;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">itemType</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;null&#34;</span>) {
+                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; is still </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">itemType</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+                }
+
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">_type</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">undefined</span>) {
+                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">itemType</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">_type</span>) {<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`Expecting &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; to be of type &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">_type</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; but got &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">itemType</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; instead`</span>)}
+                }
+
+                <span style="color:#a6e22e">_callback</span>();
                 <span style="color:#a6e22e">resolve</span>();
+            } 
+            <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">error</span>);
+                <span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">check</span>, <span style="color:#ae81ff">500</span>);
             }
-            <span style="color:#66d9ef">else</span> {<span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">check</span>, <span style="color:#ae81ff">100</span>)}
         })();
     })
 }
