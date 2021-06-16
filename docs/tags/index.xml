@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>eman de guzman (emandeguzman@gmail.com)</copyright>
-    <lastBuildDate>Tue, 25 May 2021 15:13:59 +0800</lastBuildDate>
-    
-	<atom:link href="https://emandeguzman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 16 Jun 2021 08:45:39 +0800</lastBuildDate><atom:link href="https://emandeguzman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://emandeguzman.github.io/tags/linux/</link>
+      <pubDate>Wed, 16 Jun 2021 08:45:39 +0800</pubDate>
+      
+      <guid>https://emandeguzman.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>CSS</title>

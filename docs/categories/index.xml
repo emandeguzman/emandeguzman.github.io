@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>eman de guzman (emandeguzman@gmail.com)</copyright>
-    <lastBuildDate>Tue, 25 May 2021 15:13:59 +0800</lastBuildDate>
-    
-	<atom:link href="https://emandeguzman.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 16 Jun 2021 08:45:39 +0800</lastBuildDate><atom:link href="https://emandeguzman.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Knowledgebase</title>
+      <link>https://emandeguzman.github.io/categories/knowledgebase/</link>
+      <pubDate>Wed, 16 Jun 2021 08:45:39 +0800</pubDate>
+      
+      <guid>https://emandeguzman.github.io/categories/knowledgebase/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Knowlegebase</title>
@@ -36,15 +41,6 @@
       <pubDate>Fri, 21 May 2021 13:45:08 +0800</pubDate>
       
       <guid>https://emandeguzman.github.io/categories/tips/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>KnowledgeBase</title>
-      <link>https://emandeguzman.github.io/categories/knowledgebase/</link>
-      <pubDate>Tue, 18 May 2021 15:50:28 +0800</pubDate>
-      
-      <guid>https://emandeguzman.github.io/categories/knowledgebase/</guid>
       <description></description>
     </item>
     

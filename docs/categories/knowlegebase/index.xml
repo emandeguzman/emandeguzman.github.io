@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>eman de guzman (emandeguzman@gmail.com)</copyright>
-    <lastBuildDate>Tue, 25 May 2021 15:13:59 +0800</lastBuildDate>
-    
-	<atom:link href="https://emandeguzman.github.io/categories/knowlegebase/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 25 May 2021 15:13:59 +0800</lastBuildDate><atom:link href="https://emandeguzman.github.io/categories/knowlegebase/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>inline vs inline-block</title>
       <link>https://emandeguzman.github.io/posts/inline_vs_inlineblock/</link>

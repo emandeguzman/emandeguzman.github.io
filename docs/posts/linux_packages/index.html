@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Tags</title>
+<title>Linux Packages</title>
 
 
 
@@ -10,25 +10,26 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+<meta name="description" content="Commands for maintaining linux packages">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
-<meta property="og:title" content="Tags" />
-<meta property="og:description" content="My HomePage Description" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://emandeguzman.github.io/tags/" />
-<meta property="og:updated_time" content="2021-06-16T08:45:39+08:00" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:title" content="Linux Packages" />
+<meta property="og:description" content="Commands for maintaining linux packages" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://emandeguzman.github.io/posts/linux_packages/" />
+<meta property="article:published_time" content="2021-06-16T08:45:39+08:00" />
+<meta property="article:modified_time" content="2021-06-16T08:45:39+08:00" /><meta property="og:site_name" content="My Blog" />
 
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="My HomePage Description"/>
+<meta name="twitter:title" content="Linux Packages"/>
+<meta name="twitter:description" content="Commands for maintaining linux packages"/>
 
 
 
@@ -66,6 +67,10 @@
 
 
 
+  
+    <script src="/js/toc.js"></script>
+  
+
 
 
 
@@ -101,9 +106,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/posts">
+            
+            <a class="a-block nav-link-item active" href="/posts">
                 Archive
             </a>
             
@@ -121,11 +128,9 @@
             
             
             
-                
             
             
-            
-            <a class="a-block nav-link-item active" href="/tags">
+            <a class="a-block nav-link-item false" href="/tags">
                 Tags
             </a>
             
@@ -161,6 +166,202 @@
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CONTENTS -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#update-package-database" onclick="onNavClick(`#update-package-database-nav`)" id="update-package-database-nav">
+									Update package database
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#upgrade-installed-packages" onclick="onNavClick(`#upgrade-installed-packages-nav`)" id="upgrade-installed-packages-nav">
+									Upgrade installed packages
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#install-a-package" onclick="onNavClick(`#install-a-package-nav`)" id="install-a-package-nav">
+									Install a package
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#uninstall-a-package" onclick="onNavClick(`#uninstall-a-package-nav`)" id="uninstall-a-package-nav">
+									Uninstall a package
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#note-" onclick="onNavClick(`#note--nav`)" id="note--nav">
+									Note :
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#search-for-package" onclick="onNavClick(`#search-for-package-nav`)" id="search-for-package-nav">
+									Search for package
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#list-installed-packages" onclick="onNavClick(`#list-installed-packages-nav`)" id="list-installed-packages-nav">
+									List installed packages
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#show-package-information" onclick="onNavClick(`#show-package-information-nav`)" id="show-package-information-nav">
+									Show package information
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#list-package-content" onclick="onNavClick(`#list-package-content-nav`)" id="list-package-content-nav">
+									List package content
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -178,8 +379,6 @@
         </a>
         
         
-        
-        
     </div>
 </div>
 <div class="single-column-drawer-container" ref="drawer"
@@ -192,9 +391,11 @@
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/posts">
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
                     Archive
                 </a>
                 
@@ -212,11 +413,9 @@
                 
                 
                 
-                    
                 
                 
-                
-                <a class="a-block drawer-menu-item active" href="/tags">
+                <a class="a-block drawer-menu-item false" href="/tags">
                     Tags
                 </a>
                 
@@ -231,6 +430,202 @@
                 </a>
                 
             
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CONTENTS -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#update-package-database" onclick="onNavClick(`#update-package-database-nav`)" id="update-package-database-nav">
+									Update package database
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#upgrade-installed-packages" onclick="onNavClick(`#upgrade-installed-packages-nav`)" id="upgrade-installed-packages-nav">
+									Upgrade installed packages
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#install-a-package" onclick="onNavClick(`#install-a-package-nav`)" id="install-a-package-nav">
+									Install a package
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#uninstall-a-package" onclick="onNavClick(`#uninstall-a-package-nav`)" id="uninstall-a-package-nav">
+									Uninstall a package
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#note-" onclick="onNavClick(`#note--nav`)" id="note--nav">
+									Note :
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#search-for-package" onclick="onNavClick(`#search-for-package-nav`)" id="search-for-package-nav">
+									Search for package
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#list-installed-packages" onclick="onNavClick(`#list-installed-packages-nav`)" id="list-installed-packages-nav">
+									List installed packages
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#show-package-information" onclick="onNavClick(`#show-package-information-nav`)" id="show-package-information-nav">
+									Show package information
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#list-package-content" onclick="onNavClick(`#list-package-content-nav`)" id="list-package-content-nav">
+									List package content
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
             
         </div>
     </div>
@@ -275,123 +670,111 @@
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <a class="a-block">
-            <div class="post-item-wrapper post-item-wrapper-no-hover">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title post-item-title-small">
-                            Tags
-                        </div>
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Linux Packages
+                    
+                    <div class="post-subtitle">
+                        Commands for maintaining linux packages
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-06-16 08:45
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/knowledgebase">Knowledgebase</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/linux">Linux</a>
+                                &nbsp;
+                            
+                        
+                        
                     </div>
                 </div>
             </div>
-        </a>
-        
-        
-                <a href="https://emandeguzman.github.io/tags/linux/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Linux
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="update-package-database">Update package database</h2>
+<p>sudo apt update</p>
+<h2 id="upgrade-installed-packages">Upgrade installed packages</h2>
+<p>sudo apt upgrade</p>
+<h2 id="install-a-package">Install a package</h2>
+<p>sudo apt install &lt;package name&gt;</p>
+<h2 id="uninstall-a-package">Uninstall a package</h2>
+<p>sudo apt remove &lt;package name&gt;<br>
+<!-- raw HTML omitted --><br>
+or<br>
+<!-- raw HTML omitted --><br>
+sudo apt purge</p>
+<h3 id="note-">Note :</h3>
+<p>remove leaves configuration files, purge removes all files related to the package</p>
+<h2 id="search-for-package">Search for package</h2>
+<p>apt search &lt;search string&gt;</p>
+<h2 id="list-installed-packages">List installed packages</h2>
+<p>apt list &ndash;installed<br>
+<!-- raw HTML omitted --><br>
+or<br>
+<!-- raw HTML omitted --><br>
+dpkg -l</p>
+<h2 id="show-package-information">Show package information</h2>
+<p>apt info &lt;package name&gt;</p>
+<h2 id="list-package-content">List package content</h2>
+<p>apt show &lt;package name&gt;</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-06-16</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
                 </a>
-        
-                <a href="https://emandeguzman.github.io/tags/css/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    CSS
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+                
+                
+                <a class="older-posts" href="https://emandeguzman.github.io/posts/inline_vs_inlineblock/">
+			Previous<br>inline vs inline-block
                 </a>
-        
-                <a href="https://emandeguzman.github.io/tags/git/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Git
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/vs-code/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    VS Code
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/html/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    HTML
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/meta-tags/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Meta Tags
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/safari/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Safari
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://emandeguzman.github.io/tags/javascript/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Javascript
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+                <p style="opacity: 0.6" align="center">
+                    <small>Comments Disabled.</small>
+                </p>
+                
+            </div>
+        </div>
     </div>
 </div>
 
-
-            </div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 
 <br>
 
@@ -658,6 +1041,9 @@ app = new Vue({
             elem.classList.add("table-hover");
         })
 
+        
+        spy();
+        window.addEventListener('scroll', this.debounce(spy, 250, { 'maxWait': 250 }), false);
         
         
     },

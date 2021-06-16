@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>eman de guzman (emandeguzman@gmail.com)</copyright>
-    <lastBuildDate>Tue, 18 May 2021 13:06:22 +0800</lastBuildDate>
-    
-	<atom:link href="https://emandeguzman.github.io/tags/meta-tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 18 May 2021 13:06:22 +0800</lastBuildDate><atom:link href="https://emandeguzman.github.io/tags/meta-tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Safari overflow</title>
       <link>https://emandeguzman.github.io/posts/safari_overflow/</link>
@@ -20,7 +16,7 @@
       <guid>https://emandeguzman.github.io/posts/safari_overflow/</guid>
       <description>Motivation I encountered this situation where Safari&amp;rsquo;s display would overflow when the keyboard shows up. This ruins the whole page even when the elements have a width of 100% and body has and overflow-x hidden set.
 Solution In head, add a meta tag for viewport like
- meta name=&amp;quot;viewport&amp;rdquo; content=&amp;quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0&amp;quot;&amp;gt;
+ meta name=&amp;ldquo;viewport&amp;rdquo; content=&amp;ldquo;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0&amp;rdquo;&amp;gt;
  width would set the viewport&amp;rsquo;s width to that of the device&amp;rsquo;s width.
 initial-scale makes sure the zoom level is initially set to 1 (100%).</description>
     </item>

@@ -6,9 +6,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>eman de guzman (emandeguzman@gmail.com)</copyright>
-    <lastBuildDate>Tue, 25 May 2021 15:13:59 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jun 2021 08:45:39 +0800</lastBuildDate>
     
         <atom:link href="https://emandeguzman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Linux Packages</title>
+        <link>https://emandeguzman.github.io/posts/linux_packages/</link>
+        <pubDate>Wed, 16 Jun 2021 08:45:39 +0800</pubDate>
+        
+        <guid>https://emandeguzman.github.io/posts/linux_packages/</guid>
+        <description>Eman&#39;s Blog https://emandeguzman.github.io/posts/linux_packages/ -&lt;h2 id=&#34;update-package-database&#34;&gt;Update package database&lt;/h2&gt;
+&lt;p&gt;sudo apt update&lt;/p&gt;
+&lt;h2 id=&#34;upgrade-installed-packages&#34;&gt;Upgrade installed packages&lt;/h2&gt;
+&lt;p&gt;sudo apt upgrade&lt;/p&gt;
+&lt;h2 id=&#34;install-a-package&#34;&gt;Install a package&lt;/h2&gt;
+&lt;p&gt;sudo apt install &amp;lt;package name&amp;gt;&lt;/p&gt;
+&lt;h2 id=&#34;uninstall-a-package&#34;&gt;Uninstall a package&lt;/h2&gt;
+&lt;p&gt;sudo apt remove &amp;lt;package name&amp;gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+or&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+sudo apt purge&lt;/p&gt;
+&lt;h3 id=&#34;note-&#34;&gt;Note :&lt;/h3&gt;
+&lt;p&gt;remove leaves configuration files, purge removes all files related to the package&lt;/p&gt;
+&lt;h2 id=&#34;search-for-package&#34;&gt;Search for package&lt;/h2&gt;
+&lt;p&gt;apt search &amp;lt;search string&amp;gt;&lt;/p&gt;
+&lt;h2 id=&#34;list-installed-packages&#34;&gt;List installed packages&lt;/h2&gt;
+&lt;p&gt;apt list &amp;ndash;installed&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+or&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+dpkg -l&lt;/p&gt;
+&lt;h2 id=&#34;show-package-information&#34;&gt;Show package information&lt;/h2&gt;
+&lt;p&gt;apt info &amp;lt;package name&amp;gt;&lt;/p&gt;
+&lt;h2 id=&#34;list-package-content&#34;&gt;List package content&lt;/h2&gt;
+&lt;p&gt;apt show &amp;lt;package name&amp;gt;&lt;/p&gt;
+- https://emandeguzman.github.io/posts/linux_packages/ - eman de guzman (emandeguzman@gmail.com)</description>
+        </item>
     
     
     
@@ -22,40 +59,40 @@
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;inline&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;inline-block&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;inline&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;inline-block&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;width&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[x]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;height&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[x]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;top&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[x]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;bottom&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[x]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;margin&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[x]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;padding&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[ ]&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;[x]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[ ]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[x]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -254,40 +291,40 @@ git submodule update&lt;/p&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Method&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;read by&lt;!-- raw HTML omitted --&gt; screen reader&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;affects&lt;!-- raw HTML omitted --&gt;document layout&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;rendered&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;responds&lt;!-- raw HTML omitted --&gt; to events&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;read by&lt;!-- raw HTML omitted --&gt; screen reader&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;affects&lt;!-- raw HTML omitted --&gt;document layout&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;rendered&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;responds&lt;!-- raw HTML omitted --&gt; to events&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;display: none&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;visibility=hidden&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;opacity=0&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;position=absolute&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;no&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;yes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -307,7 +344,7 @@ git submodule update&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
 &lt;p&gt;In head, add a meta tag for viewport like&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;meta name=&amp;quot;viewport&amp;rdquo; content=&amp;quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0&amp;quot;&amp;gt;&lt;/p&gt;
+&lt;p&gt;meta name=&amp;ldquo;viewport&amp;rdquo; content=&amp;ldquo;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0&amp;rdquo;&amp;gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;width&lt;/strong&gt; would set the viewport&amp;rsquo;s width to that of the device&amp;rsquo;s width.&lt;br&gt;
 &lt;strong&gt;initial-scale&lt;/strong&gt; makes sure the zoom level is initially set to 1 (100%).&lt;br&gt;
